@@ -112,3 +112,9 @@ body > footer {
   font-size: 0.5rem;
   color: grey;
 }
+
+#list > li > article > p.file {
+  cursor: pointer;
+  text-underline: darkcyan;
+  color: darkcyan;
+}
