@@ -1,0 +1,114 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content min-content auto;
+}
+
+.wait {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 255, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes wait_slidein {
+  from {
+    font-size: 1rem;
+  }
+
+  to {
+    font-size: 2rem;
+  }
+}
+
+.wait > div {
+  font-size: 1rem;
+
+  animation-duration: 1s;
+  animation-name: wait_slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+body > header {
+  word-break: break-all;
+}
+
+body > header > div:nth-child(1) > span {
+  font-size: 12px;
+}
+
+body > header > div:nth-child(2) {
+  display: flex;
+  align-items: center;
+}
+
+body > header > div:nth-child(2) > div:first-child {
+  flex: 1;
+}
+
+body > article > div:nth-child(1) {
+  height: 200px;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+body > article > div:nth-child(1) > div:nth-child(1) {
+  color: gray;
+}
+
+body > article > div:nth-child(1) > div:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+body > article > div:nth-child(2) {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+body > article > div:nth-child(2) > div {
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  background-color: darkcyan;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+body > footer {
+  overflow: auto;
+}
+
+#list > li {
+  word-break: break-all;
+}
+
+#list > li > header {
+  font-family: monospace;
+  font-size: 0.5rem;
+  color: grey;
+}

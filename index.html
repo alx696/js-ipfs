@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+  <title>ipfs</title>
+  <link rel="stylesheet" href="ipfs.css">
+  <script src="index.min.js"></script>
+  <script src="ipfs.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      M.init();
+    });
+  </script>
+</head>
+<body>
+
+<header>
+  <div><b>ID：</b><span id="info_id"></span></div>
+  <div>
+    <div><b>集群节点数量：</b><span id="info_swarm_peers"></span></div>
+    <div><b>发收节点数量：</b><span id="info_pubsub_peers"></span></div>
+  </div>
+</header>
+
+<article>
+  <div>
+    <div>输入文字或托放文件</div>
+    <div id="input_text" contenteditable="true"></div>
+  </div>
+  <div>
+    <div id="button_send">发送</div>
+  </div>
+</article>
+
+<footer>
+  <ul id="list"></ul>
+</footer>
+
+<div class="wait">
+  <div>正在组网</div>
+</div>
+
+</body>
+</html>
