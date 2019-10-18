@@ -67,11 +67,11 @@ const M = {
           }
 
           const p = document.createElement('p');
-          p.innerHTML = `<a href="https://ipfs.dev.lilu.red/${fileInfo.hash}" target="_blank">${fileInfo.path}</a>`;
+          p.innerHTML = `<a href="https://test.dev.lilu.red/ipfs/${fileInfo.hash}" target="_blank">${fileInfo.path}</a>`;
           article.append(p);
         }
       } else {
-        li.innerHTML = `<header>${msg.from}</header><article>${json.text}</article>`;
+        li.innerHTML = `<header>${msg.from}</header><article><p>${json.text}</p></article>`;
       }
 
       list.append(li);
