@@ -258,7 +258,15 @@ const M = {
             return;
           }
 
-          console.debug('集群节点:', peers);
+          //peer解析参考 https://github.com/multiformats/js-multiaddr#usage
+          // console.debug('集群节点:', peers);
+          for(const peer of peers) {
+            console.debug(
+                '集群节点:',
+                peer.addr.toString()
+            );
+          }
+
           S.swarm_peers = peers;
           info_swarm_peers.textContent = S.swarm_peers.length;
           if (!S.ready) {
